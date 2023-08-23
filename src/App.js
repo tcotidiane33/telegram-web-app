@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Card from "./Components/Card/Card";
-//import Cart from "./Components/Cart/Cart";
+import Cart from "./Components/Cart/Cart";
 const { getData } = require("./db/db");
 const foods = getData();
 
-//const telegram = window.Telegram.WebApp;
+const telegram = window.Telegram.WebApp;
 
 function App() {
-//  const [cartItems, setCartItems] = useState([]);
-/*
+  const [cartItems, setCartItems] = useState([]);
+
   useEffect(() => {
     telegram.ready();
   });
-*/
 
-/*
+
+
   const onAdd = (food) => {
     const exist = cartItems.find((x) => x.id === food.id);
     if (exist) {
@@ -46,14 +46,15 @@ function App() {
     telegram.MainButton.text = "Pay :)";
     telegram.MainButton.show();
   };
-*/
+
   return (
     <>
       <h1 className="heading">Order Food</h1>
+      <Cart cartItems={cartItems} onCheckout={onCheckout}/>
       <div className="cards__container">
         {foods.map((food) => {
           return (
-            <Card food={food} key={food.id}  />
+            <Card food={food} key={food.id} onAdd={onAdd}  onRemove={onRemove} />
           );
         })}
       </div>
