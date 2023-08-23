@@ -14,6 +14,8 @@ function App() {
     tele.ready();
   });
 
+
+
   const onAdd = (food) => {
     const exist = cartItems.find((x) => x.id === food.id);
     if (exist) {
