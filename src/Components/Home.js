@@ -104,7 +104,7 @@ function App() {
           {paymentResponse.data && (
             <div>
               <p><strong>Payment Token :</strong> {paymentResponse.data.payment_token}</p>
-              <p><strong>Payment URL :</strong> <a href={paymentResponse.data.payment_url} target="_blank" rel="noopener noreferrer">{paymentResponse.data.payment_url}</a></p>
+              <p><strong>Payment URL :</strong> <button onClick={() => window.open(paymentResponse.data.payment_url, '_blank')}>Ouvrir le lien dans l'/'application</button></p>
             </div>
           )}
         </div>
