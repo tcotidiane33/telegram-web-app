@@ -2,7 +2,8 @@ const TelegramBot = require('node-telegram-bot-api');
 
 // replace the value below with the Telegram token you receive from @BotFather
 const token = '6445094207:AAE5AqlctyhsBUiQ0OMuM0mv0R4BfEl0TF8';
-const webAppUrl = 'https://matts.netlify.app';
+const webAppUrl = 'https://lecompay.netlify.app/';
+const webAppUrlShop = 'https://lecompay.netlify.app/'
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
 
@@ -24,7 +25,7 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, 'Welcome sur la WebApp de pay:) ', {
       reply_markup: {
         keyboard: [
-          [{text: ' Go to shop !', web_app: {url:webAppUrl}}]
+          [{text: ' Go to shop !', web_app: {url:webAppUrlShop}}]
         ]
       }
     })

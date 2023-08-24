@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #e0c521;
+    --primary-color: #c0a912;
   }
   
   .card {
@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 150px;
-    height: 250px;
+    height: 230px;
     border: 2px solid var(--primary-color);
     padding: 0.5rem 0.3rem;
     margin: 13px 10px;
@@ -25,8 +25,8 @@
   }
   
   .image__container {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 120px;
     margin: 0 auto;
   }
   

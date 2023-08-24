@@ -15,11 +15,11 @@ import watch_4 from "../images/watch-4.jpg";
 
 export function getData() {
   return [
-    { title: "Pull Over", price: 12.000, Image: pull,id:1 },
-    { title: "Belt", price: 15.000, Image: belt,id:2 },
-    { title: "Jacket 1", price: 17.000, Image: jacket_1 ,id:3},
-    { title: "Jacket 2", price: 15.500, Image: jacket_2 ,id:4 },
-    { title: "Jacket 3", price: 18.000, Image: jacket_3 ,id:5 },
+    { title: "Pull Over", price: 12.000, Image: pull, id:1 },
+    { title: "Belt", price: 15.000, Image: belt, id:2 },
+    { title: "Jacket 1", price: 17.000, Image: jacket_1, id:3},
+    { title: "Jacket 2", price: 15.500, Image: jacket_2, id:4 },
+    { title: "Jacket 3", price: 18.000, Image: jacket_3, id:5 },
     { title: "Shoe 1", price: 44.000, Image: shoe_1, id:6 },
     { title: "Shoe 2", price: 54.000, Image: shoe_2, id:7},
     { title: "Shoe 3", price: 85.000, Image: shoe_3, id:8 },
