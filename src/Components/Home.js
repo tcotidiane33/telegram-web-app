@@ -104,7 +104,7 @@ function App() {
           {paymentResponse.data && (
             <div>
               <p><strong>Payment Token :</strong> {paymentResponse.data.payment_token}</p>
-              <p><strong>Payment URL :</strong> <button onClick={() => window.open(paymentResponse.data.payment_url, '_blank')}>Ouvrir le lien dans l'/'application</button></p>
+              <p><strong>Payment URL :</strong> <button onClick={() => window.open(`tg://openurl?url=${encodeURIComponent(paymentResponse.data.payment_url)}`)}>Ouvrir le lien Ici!</button></p>
             </div>
           )}
         </div>
