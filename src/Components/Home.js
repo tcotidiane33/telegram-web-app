@@ -104,7 +104,20 @@ function App() {
           {paymentResponse.data && (
             <div>
               <p><strong>Payment Token :</strong> {paymentResponse.data.payment_token}</p>
+              
+              <p>
+              <strong>Payment URL :</strong>{" "}
+              <a
+                href={`tg://openurl?${encodeURIComponent(paymentResponse.data.payment_url)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Cliquez ici pour ouvrir le lien dans l_application Telegram.
+              </a>
+            </p>
               <p><strong>Payment URL :</strong> <button onClick={() => window.open(`tg://openurl?url=${encodeURIComponent(paymentResponse.data.payment_url)}`)}>Ouvrir le lien Ici!</button></p>
+
+
             </div>
           )}
         </div>
