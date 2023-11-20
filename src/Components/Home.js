@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "./Card/Card";
 import Cart from "./Cart/Cart";
-//import Cinetpay from "./Cinetpay/Cinetpay";
+import Nav from "./Nav/Nav";
 import axios from "axios";
 import './Cinetpay/Payment.css';
 
@@ -92,37 +92,9 @@ function App() {
 
   return (
     <>
-      <h1 className="heading">Shop Express</h1>
+      <h1 className="heading">Welcome Cuisto Dingo</h1>
       <Cart cartItems={cartItems} onClick={handlePayment}/>
-      <button className="btn" type={"checkout"} onClick={handlePayment}>Buy</button>
-      {paymentResponse && (
-        <div className="payment-receipt">
-          <h2>Réception de paiement :</h2>
-          <p><strong>Code :</strong> {paymentResponse.code}</p>
-          <p><strong>Message :</strong> {paymentResponse.message}</p>
-          <p><strong>Description :</strong> {paymentResponse.description}</p>
-          {paymentResponse.data && (
-            <div>
-              <p><strong>Payment Token :</strong> {paymentResponse.data.payment_token}</p>
-              
-              <p>
-              <strong>Payment URL :</strong>{" "}
-              <a
-                href={`tg://openurl?${encodeURIComponent(paymentResponse.data.payment_url)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Cliquez ici pour ouvrir le lien dans l_application Telegram.
-              </a>
-            </p>
-              <p><strong>Payment URL :</strong> <button onClick={() => window.open(`tg://openurl?url=${encodeURIComponent(paymentResponse.data.payment_url)}`)}>Ouvrir le lien Ici!</button></p>
-
-
-            </div>
-          )}
-        </div>
-      )}
-      
+      <Nav />
       <div className="cards__container">
         {products.map((product) => {
           return (

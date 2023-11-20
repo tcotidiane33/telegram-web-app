@@ -6,6 +6,8 @@ import Notify from "./Components/Cinetpay/Notify";
 import Return from "./Components/Cinetpay/Return";
 import Cancel from "./Components/Cinetpay/Cancel";
 import Payment from "./Components/Cinetpay/PaymentButton";
+import Category from "./Components/Category";
+import Order from "./Components/Order";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/order" exact component={Order} />
+          <Route path="/category" component={Category} />
           <Route path="/notify" component={Notify} />
           <Route path="/payment" component={Payment} />
           <Route path="/return" component={Return} />

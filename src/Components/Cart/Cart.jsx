@@ -9,10 +9,10 @@ function Cart({ cartItems, checkout }) {
       {cartItems.length === 0 ? "No items in cart" : ""}
       <br /> <span className="bold">Total Price: XOF{totalPrice.toFixed(2)}</span>
       <Button
-        title={`${cartItems.length === 0 ? "Welcome to shopExpress !" : "Buy"} `}
+        title={`${cartItems.length === 0 ? "Welcome to Cuisto Dingo !" : "Buy"} `}
         type={"checkout"}
         disable={cartItems.length === 0 ? true : false}
-        onClick={checkout}
+        onClick={() => checkout(totalPrice)} // Passer le prix total à la fonction checkout
       />
     </div>
   );
